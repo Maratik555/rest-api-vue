@@ -3,6 +3,7 @@ const path = require('path')
 const {v4} = require('uuid')
 const app = express()
 
+
 let CONTACTS = [
   {id: v4(), name: 'Marat', value: '+7-921-100-20-30', marked: false}
 ]

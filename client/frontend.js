@@ -47,8 +47,10 @@ new Vue({
       contact.marked = updated.marked
     },
     async removeContact(id) {
-      await request(`/api/contacts/${id}`, 'DELETE')
+      if (confirm('DELETE ???')) {
+        await request(`/api/contacts/${id}`, 'DELETE')
       this.contacts = this.contacts.filter(c => c.id !== id)
+      }
     }
   },
   async mounted() {
